@@ -110,7 +110,7 @@ void loop()
     char data[64];
     snprintf(data, sizeof(data), "t: %.2f°C, h: %.2f%%, l:%i", tempC, humidity, light); // output: t: 12.34°C, h: 45.67%, l: 200
     unsigned long now = millis();
-    //Every 15 seconds publish uptime
+    //Every 60 seconds publish uptime
     if (now-lastTime>60000UL) {
         lastTime = now;
         // now is in milliseconds
